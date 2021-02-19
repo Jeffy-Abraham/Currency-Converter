@@ -1,0 +1,63 @@
+select {
+  width: 361px;
+  height: 62px;
+  background: #ffffff;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+  border-radius: 6px;
+  outline: none;
+  color: #3a3b3f;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+}
+.Currency {
+  font-weight: 300;
+  color: #3a3b3f;
+  margin-bottom: 13px;
+  position: relative;
+}
+.Currency-Container {
+  height: 293px;
+  width: 80%px;
+  background: #f0f1f4;
+  border-radius: 10px;
+  padding: 30px;
+}
+option {
+  color: #3a3b3f;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+.Input-Currency {
+  position: relative;
+}
+.Input-Currency input {
+  width: 361px;
+  height: 62px;
+  background: #ffffff;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+  border-radius: 6px;
+  outline: none;
+  color: #3a3b3f;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+}
+.Symbol {
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #3a3b3f;
+}
