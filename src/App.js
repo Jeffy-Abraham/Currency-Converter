@@ -3,16 +3,16 @@ import "./App.css";
 import Headers from "./components/header-component/navigation-component";
 import { Switch, Route, useLocation } from "react-router-dom";
 import Currency from "./page/currency-page/currency.page";
-import Conversion from "./page/conversion-page/conversion.page";
 import ExchangeRateProvider from "./context/exchangeRate-context/exchangeRate-context";
 import ListStateRateProvider from "./context/listExchangeRate-context/listExchangeRate-context";
-
+import ClipLoader from "react-spinners/ClipLoader";
+const Conversion = React.lazy(() => import('./page/conversion-page/conversion.page'));
 
 const App = () => {
   return (
     <div>
       <Headers />
-
+    <Suspense fallback={<ClipLoader/>}>
       <Switch>
         <Route
           exact
@@ -34,6 +34,7 @@ const App = () => {
           )}
         />
       </Switch>
+      </Suspense>
     </div>
   );
 };
