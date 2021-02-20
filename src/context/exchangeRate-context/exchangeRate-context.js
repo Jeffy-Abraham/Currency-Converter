@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useContext } from "react";
 import axios from "axios";
-
+/*This context is responssible for holding all the information regarding excahnage currency operations*/
 export const ExchangeRateContext = createContext();
 
 class ExchangeRateProvider extends React.Component {
@@ -18,6 +18,9 @@ class ExchangeRateProvider extends React.Component {
       });
       this.setState({ targetAmount: currentAmount });
     };
+    //Insted of having a local state, move the state to the context such that it maintains single source of truth
+    //Also it makes it easy when it comes to manipulating values
+    //We use this method in input form , where we enter the amount to convert
     this.updateBaseCurrency = (data) => {
       this.setState({ baseCurrency: data }, function () {
         const { targetCurrency, baseCurrency } = this.state;
@@ -25,7 +28,9 @@ class ExchangeRateProvider extends React.Component {
         this.updateExchangeRate(baseCurrency.currency, targetCurrency.currency);
       });
     };
-    //
+    ////Insted of having a local state, move the state to the context such that it maintains single source of truth
+    //Also it makes it easy when it comes to manipulating values
+    //We use this method in input form , where we enter the amount to convert
     this.updateTargetCurrency = (data) => {
       this.setState({ targetCurrency: data }, function () {
         const { targetCurrency, baseCurrency } = this.state;
@@ -39,7 +44,10 @@ class ExchangeRateProvider extends React.Component {
       updateTargetAmount: this.updateTargetAmount,
       updateBaseCurrency: this.updateBaseCurrency,
       updateTargetCurrency: this.updateTargetCurrency,
-      exchangeRate: "",
+      //Holds the exchange rate(The value is set when components mounts for the first time and also when user selects the country)
+      exchangeRate: 0,
+
+      //Value changes when user selects the country in the <Options/>component
       baseCurrency: {
         id: 3,
         currency: "GBP",

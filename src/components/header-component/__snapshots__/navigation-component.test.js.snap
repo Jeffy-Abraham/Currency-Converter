@@ -11,26 +11,24 @@ exports[`A snapshot is created for HeaderComponent renders correctly 1`] = `
         onClick={[Function]}
       >
          
-        <a
+        <div
           className="active-link"
-          href={true}
           onClick={[Function]}
         >
           CURRENCY CONVERTER
-        </a>
+        </div>
       </a>
       <a
         href="/exchange"
         onClick={[Function]}
       >
          
-        <a
+        <div
           className=""
-          href={true}
           onClick={[Function]}
         >
           CURRENT EXCHANGE RATES
-        </a>
+        </div>
       </a>
       <div
         className="animation-start-home"

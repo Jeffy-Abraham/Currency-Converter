@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A snapshot is created for ConversionPage renders correctly 1`] = `
+<div
+  className="Grid-Layout"
+>
+  <div
+    className="Grid-Heading"
+  >
+    <div
+      className="Grid-Title"
+    >
+      <span>
+        US Dollar (USD) Exchange Rates
+      </span>
+    </div>
+  </div>
+  <div
+    className="Display-Table-Container"
+  >
+    <table
+      className="Display-Table"
+    >
+      <tr
+        className="Display-Table-Rows"
+      >
+        <th>
+          Currency
+        </th>
+        <th>
+          Currency Name
+        </th>
+        <th>
+          Exchange Rate= 1USD
+        </th>
+      </tr>
+      <span
+        className="css-1rpz77w"
+      />
+    </table>
+  </div>
+</div>
+`;

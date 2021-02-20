@@ -2,6 +2,7 @@ import React from "react";
 import "./navigation-component.css";
 import { gsap } from "gsap/all";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 class Headers extends React.Component {
   constructor() {
@@ -39,7 +40,6 @@ class Headers extends React.Component {
   }
 
   render() {
-  
     const { Links, activeLink } = this.state;
     return (
       <div>
@@ -71,3 +71,7 @@ class Headers extends React.Component {
   }
 }
 export default Headers;
+Headers.propTypes = {
+  Links: PropTypes.string,
+  activeLink: PropTypes.number,
+};

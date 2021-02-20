@@ -3,6 +3,7 @@ import { ListContext } from "../../context/listExchangeRate-context/listExchange
 import "./conversion.style.css";
 import countryLookUp from "./lookupData";
 import ClipLoader from "react-spinners/ClipLoader";
+import PropTypes from "prop-types";
 
 const Conversion = () => {
   var exchangeList = useContext(ListContext);
@@ -10,7 +11,9 @@ const Conversion = () => {
   return (
     <div className="Grid-Layout">
       <div className="Grid-Heading">
-        <div className="Grid-Title">US Dollar (USD) Exchange Rates</div>
+        <div className="Grid-Title">
+          <span>US Dollar (USD) Exchange Rates</span>
+        </div>
       </div>
       <div className="Display-Table-Container">
         <table className="Display-Table">
@@ -20,7 +23,7 @@ const Conversion = () => {
             <th>Exchange Rate= 1USD</th>
           </tr>
           {Keys.length === 0 ? (
-            <React.Fragment >
+            <React.Fragment>
               <ClipLoader className="Center" />
             </React.Fragment>
           ) : (
@@ -43,3 +46,6 @@ const Conversion = () => {
 };
 
 export default Conversion;
+Conversion.propTypes = {
+  exchangeList: PropTypes.number,
+};
